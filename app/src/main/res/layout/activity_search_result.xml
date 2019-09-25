@@ -78,7 +78,8 @@
         app:cardBackgroundColor="#f4bb0a"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="true"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"

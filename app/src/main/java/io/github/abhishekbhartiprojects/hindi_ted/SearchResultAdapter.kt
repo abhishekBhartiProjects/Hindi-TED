@@ -58,7 +58,7 @@ class SearchResultAdapter(var searchResultList: ArrayList<Any>, var searchResult
             is SearchResultLevelViewHolder -> holder.bindView(searchResultList[position] as WordLevel, searchResultViewModel)
 
             is SearchResultEnglishViewHolder -> {
-
+                holder.bindView(searchResultList[position] as EnglishWord, searchResultViewModel)
             }
         }
     }
