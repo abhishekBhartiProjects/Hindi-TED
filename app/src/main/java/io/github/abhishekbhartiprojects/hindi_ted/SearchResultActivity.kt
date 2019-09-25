@@ -1,27 +1,32 @@
 package io.github.abhishekbhartiprojects.hindi_ted
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
+import android.widget.Toast
+import io.github.abhishekbhartiprojects.hindi_ted.model.SearchResultData
+import io.github.abhishekbhartiprojects.hindi_ted.model.SearchResultResponse
 import kotlinx.android.synthetic.main.activity_search_result.*
-import org.json.JSONObject
-import org.json.JSONException
-import org.json.JSONArray
 
 
 class SearchResultActivity : AppCompatActivity() {
 
     lateinit var searchResultViewModel: SearchResultViewModel
     lateinit var adapter: SearchResultAdapter
+    lateinit var searchTerm: String
+    var searchResultData: SearchResultData? = null
 
     companion object {
-        fun start(context: Context){
+        val KEY_SEARCH_TERM: String = "KEY_SEARCH_TERM"
+
+        fun start(context: Context, searchTerm: String = ""){
             val intent = Intent(context, SearchResultActivity::class.java)
+            intent.putExtra(KEY_SEARCH_TERM, searchTerm)
             context.startActivity(intent)
         }
     }
@@ -31,13 +36,27 @@ class SearchResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search_result)
 
         init()
+        initBundle()
+        setAllData()
+        initUI()
     }
 
     private fun init() {
         initViews()
         initViewModel()
         initViewModelObserver()
-        getDefaultSearchResult()
+        initClickListener()
+    }
+
+    private fun initBundle() {
+        searchTerm = intent.getStringExtra(KEY_SEARCH_TERM)
+    }
+
+    private fun initUI(){
+        if(!searchTerm.isEmpty()){
+            search_query_et.setText(searchTerm)
+            getSearchResult(searchTerm)
+        }
     }
 
     private fun initViews() {
@@ -51,54 +70,55 @@ class SearchResultActivity : AppCompatActivity() {
     }
 
     private fun initViewModelObserver() {
-        searchResultViewModel.searchResult.observe(this, Observer {
+        searchResultViewModel.searchResultListData.observe(this, Observer {
             it?.let {
                 if (it.size > 0) {
                     onSearchResultSuccess(it)
+                } else {
+                    Toast.makeText(this, "No Result Found!!", Toast.LENGTH_SHORT).show()
                 }
+            }
+        })
+
+        searchResultViewModel.searchResult.observe(this, Observer {
+            it?.let {
+                searchResultData = it
             }
         })
     }
 
+    private fun initClickListener(){
+        layout_hin_search_ll.setOnClickListener {
+            if(!search_query_et.text.toString().isNullOrEmpty()){
+                getSearchResult(search_query_et.text.toString())
+            } else {
+                Toast.makeText(this, "Enter search term!!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        dictionary_cv.setOnClickListener {
+            if(searchResultData != null) {
+                DictionaryActivity.start(this, searchResultData!!)
+            }
+        }
+    }
+
     private fun onSearchResultSuccess(searchResultList: ArrayList<Any>) {
-        adapter = SearchResultAdapter(searchResultList, searchResultViewModel)
-        search_result_list_rv.adapter = adapter
+        if(searchResultList.size > 0){
+            adapter = SearchResultAdapter(searchResultList, searchResultViewModel)
+            search_result_list_rv.adapter = adapter
+            dictionary_cv.visibility = View.VISIBLE
+        } else {
+            Toast.makeText(this, "No result found!!", Toast.LENGTH_SHORT).show()
+        }
     }
 
-    private fun getDefaultSearchResult(){
-        searchResultViewModel.getSearchResult("")
+    private fun setAllData(){
+        searchResultViewModel.setAllData()
     }
 
-//    private fun downloadSpreadsheetData(){
-//        DownloadWebpageTask(AsyncResult { `object` -> processJson(`object`) }).execute("https://spreadsheets.google.com/tq?key=1yyTcjWA6RAUwkI7sKOevWXAJfpITs__Zb0TwilihDCw")
-//    }
-//
-//    var teams = ArrayList<Team>()
-//    private fun processJson(`object`: JSONObject) {
-//
-//        try {
-//            val rows = `object`.getJSONArray("rows")
-//
-//            for (r in 0 until rows.length()) {
-//                val row = rows.getJSONObject(r)
-//                val columns = row.getJSONArray("c")
-//
-//                val position = columns.getJSONObject(0).getInt("v")
-//                val name = columns.getJSONObject(1).getString("v")
-//                val wins = columns.getJSONObject(3).getInt("v")
-//                val draws = columns.getJSONObject(4).getInt("v")
-//                val losses = columns.getJSONObject(5).getInt("v")
-//                val points = columns.getJSONObject(19).getInt("v")
-//                val team = Team(position, name, wins, draws, losses, points)
-//                teams.add(team)
-//            }
-//
-//            val adapter = TeamsAdapter(this, R.layout.team, teams)
-//            listview.setAdapter(adapter)
-//
-//        } catch (e: JSONException) {
-//            e.printStackTrace()
-//        }
-//
-//    }
+    private fun getSearchResult(query: String){
+        searchResultViewModel.getSearchResult(query)
+    }
+
 }
