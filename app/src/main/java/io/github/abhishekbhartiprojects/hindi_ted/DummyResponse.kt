@@ -36,7 +36,7 @@ class DummyResponse {
             "    },\n" +
             "    {\n" +
             "      \"hindi_word\": \"भगवान\",\n" +
-            "      \"search_term\": \"भगवान, ईश्वर, परमात्मा, Bhagwan, Ishwar, Parmatma\",\n" +
+            "      \"search_term\": \"भगवान, ईश्वर, परमात्मा, Bhagwan, Ishwar, Parmatma, bhagwan, ishwar, parmatma\",\n" +
             "\t  \"dictionary\" : \"1.ईश्वर \\n\\n 2. परमात्मा \\n\\n3.प्रभु \\n\\n 4. ईश \\n\\n 5.जगदीश \\n\\n 6.भगवान\\n\\n 7.परमेश्वर \\n\\n 8. जगदीश्वर \\n\\n 9. विधाता\",\n" +
             "      \"levels\": [\n" +
             "        {\n" +
@@ -62,7 +62,7 @@ class DummyResponse {
             "    },\n" +
             "\t{\n" +
             "      \"hindi_word\": \"\",\n" +
-            "      \"search_term\": \"अग्नि, आग, अनल, Agni, Aag, Anal\",\n" +
+            "      \"search_term\": \"अग्नि, आग, अनल, Agni, Aag, Anal, agni, aag, anal\",\n" +
             "\t  \"dictionary\" : \"यह हिंदी का संज्ञा-स्त्रीलिंग शब्द है\\n\\n\\n\\n1. जो ताप और प्रकाश देता है\\n\\n 2.अग्नि \\n\\n3. {लाक्षणिक अर्थ} जलन, डाह, संताप\\n\\n4. {लाक्षणिक अर्थ} कामाग्नि, अंतर्दाह\\n\\n5. {मुहावरा} आग-धधकना : असंतोष फैलना\\n\\n6. {मुहावरा} आग-बबूला होना : बहुत गुस्से में होना\\n\\n7. {मुहावरा} आग-लगना : गुस्से से लाल हो जाना\",\n" +
             "      \"levels\": [\n" +
             "        {\n" +
@@ -88,7 +88,7 @@ class DummyResponse {
             "    },\n" +
             "\t{\n" +
             "      \"hindi_word\": \"\",\n" +
-            "      \"search_term\": \"मेहमान, अतिथि, आगन्तुक, Mehman, Atithi, agantuk\",\n" +
+            "      \"search_term\": \"मेहमान, अतिथि, आगन्तुक, Mehman, Atithi, agantuk, mehman, atithi, Agantuk\",\n" +
             "\t  \"dictionary\": \"1. मेहमान एक फारसी शब्द है, जो संज्ञा एवं पुल्लिंग है \\n\\n 2. अतिथि\\n\\n 3. मेहमान\\n\\n 4.आगन्तुक\\n\\n 5.पहुना -देशी हिंदी का शब्द है\\n\\n 6.आमंत्रित जन \\n\\n\",\n" +
             "      \"levels\": [\n" +
             "        {\n" +
