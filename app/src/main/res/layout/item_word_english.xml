@@ -18,7 +18,7 @@
             android:id="@+id/english_word_heading_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="English Word"
+            android:text="Equivalent English Word :"
             android:layout_marginStart="20dp"
             android:textColor="@color/colorAccent"
             app:layout_constraintTop_toTopOf="parent"
