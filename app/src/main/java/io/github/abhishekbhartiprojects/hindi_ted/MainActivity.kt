@@ -1,5 +1,6 @@
 package io.github.abhishekbhartiprojects.hindi_ted
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     private fun initClickListener(){
         layout_hin_search_ll.setOnClickListener {
             SearchResultActivity.start(this)
+        }
+        aboutus.setOnClickListener {
+            val intent = Intent(this, AboutUsActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hindi-TED</string>
+    <string name="title_activity_about_us">About Us</string>
+    <string name="cat_1" formatted="true"><b>Non Native Hindi Speaker</b> - to learn basic words</string>
+    <string name="cat_2" formatted="true"><b>Hindi Translators</b> - to learn context/cultural background with multiple examples</string>
+    <string name="cat_3" formatted="true"><b>Hindi Student</b> - to simply use it as dictionary</string>
 </resources>

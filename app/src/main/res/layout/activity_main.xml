@@ -132,6 +132,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/aboutus"
+                android:id="@+id/aboutus"
                 app:layout_constraintTop_toTopOf="@id/layout_eng_hin_ll"
                 app:layout_constraintBottom_toBottomOf="@id/layout_hin_eng_ll"
                 app:layout_constraintStart_toStartOf="@id/layout_eng_hin_ll"
