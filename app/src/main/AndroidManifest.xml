@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".voiceToText.VoiceToTextActivity"></activity>
-        <activity android:name=".DictionaryActivity" />
-        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".DictionaryActivity"/>
+        <activity android:name=".SearchResultActivity"/>
+        <activity android:name=".voiceToText.VoiceToTextActivity"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
