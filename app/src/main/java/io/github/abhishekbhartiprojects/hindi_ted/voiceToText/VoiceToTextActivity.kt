@@ -31,12 +31,12 @@ class VoiceToTextActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(io.github.abhishekbhartiprojects.hindi_ted.R.layout.activity_voice_to_text)
+        setContentView(R.layout.activity_voice_to_text)
 
         initView()
         initClickListeners()
 
-        txtSpeechInput = findViewById(io.github.abhishekbhartiprojects.hindi_ted.R.id.txtSpeechInput) as TextView
+        txtSpeechInput = findViewById(R.id.txtSpeechInput) as TextView
 
         // hide the action bar
         if (actionBar != null) {

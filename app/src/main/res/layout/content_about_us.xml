@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AboutUsActivity"
+    tools:showIn="@layout/activity_about_us"
+    android:layout_margin="35px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:paddingBottom="15px"
+            android:text="This app-idea is result of motivation from Student Innovation Awards 2019 by IGNOU, Delhi." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Hindi-TED as an idea is trying to disrupt the way we use dictionary and helps 3 categories of people:-" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1. "
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:text="@string/cat_1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2. "
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:text="@string/cat_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="3. "
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:text="@string/cat_3"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="15px"
+            android:background="#999999"
+            android:layout_width = "match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:paddingTop="15px"
+            android:text="The abbreviation TED means “Learning Hindi  through Translation, Example and Dictionary. This is our beta-app and we expect bugs, so kindly contact us - "/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:autoLink="email"
+            android:text="learnhindichannel@gmail.com"/>
+
+        <View
+            android:layout_marginTop="15px"
+            android:background="#999999"
+            android:layout_width = "match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:paddingTop="15px"
+            android:text="Our next big update includes increased database size (API) and addition of 3 amazing functionalities :-"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1. "
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:text="Flash cards"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2. "
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:text="Graphic Contents"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="3. "
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:text="Advanced Voice Search through Transliteration from Any language to Hindi/English language "/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="15px"
+            android:background="#999999"
+            android:layout_width = "match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:paddingTop="15px"
+            android:text="You can learn more about the ideation here-" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:text="https://youtu.be/J56JV2BOtVI"
+            android:autoLink="web"/>
+
+    </LinearLayout>
+
+</ScrollView>
